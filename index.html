@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twobean</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <p>경고문: 이 웹사이트는 디바이스에 따라 글이 다소 어지럽게 보일 수 있음.</p>
+        </div>
+    </div>
+    <header>
+        <h1>twobean</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar left" id="left-sidebar">
+            <h3>프로필</h3>
+            <img src="resource/twoobean.png" alt="프로필 사진">
+            <p>twobean</p>
+            <p>17세 고등학생</p>
+        </aside>
+        <main>
+            <section id="about">
+                <h2>소개</h2>
+                <img id="profile-pic" src="resource/twobeann.png" alt="프로필 사진">
+                <p>안녕하세요!</p>
+                <p>저는 프로그래머를 꿈꾸고 있는 학생인 "투빈"입니다!</p>
+                <div id="details" class="hidden">
+                    <h3>학력</h3>
+                    <p class="clickable" onclick="location.href='https://namu.wiki/w/%EB%8F%99%ED%8F%89%EC%A4%91%ED%95%99%EA%B5%90(%EB%B6%80%EC%82%B0)'">동평중학교 졸업</p>
+                    <br>
+                    <p class="clickable" onclick="location.href='https://namu.wiki/w/%EA%B2%BD%EC%9B%90%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90(%EB%B6%80%EC%82%B0)'">경원고등학교 재학 중</p>
+                    <h3>경력</h3>
+                    <p>2023.08.06 ~ 2024.01.12: mincraft server resource & system developer</p>
+                    <br></br>
+                    <p>2023.10.05 ~ 2023.12.23: discord bot developer</p>
+                </div>
+            </section>
+            <section id="hobbies">
+                <h2>취미</h2>
+                <div class="hobby" onclick="toggleHobbyDetails('hobby1-details')">
+                    <img src="resource/valorant.png" alt="1번째 취미">
+                    <div class="hobby-info">
+                        <h3>1번째 취미: 게임</h3>
+                        <p>저는 게임을 좋아해서 자주 합니다.</p>
+                    </div>
+                </div>
+                <div id="hobby1-details" class="hobby-details hidden">
+                    <p>valorant: gold</p>
+                    <p>overwatch: gold</p>
+                </div>
+                <div class="hobby" onclick="toggleHobbyDetails('hobby2-details')">
+                    <img src="resource/java.png" alt="2번째 취미">
+                    <div class="hobby-info">
+                        <h3>2번째 취미: 프로그래밍</h3>
+                        <p>프로그래밍을 할때 가장 흥미로워 하면서 </p>
+                        <p>저의 진로와 관련이 있습니다 </p>
+                    </div>
+                </div>
+                <div id="hobby2-details" class="hobby-details hidden">
+                    <p>Java studdy</p>
+                    <br>
+                    <p>python 3mo</p>
+                    <br>
+                    <p>HTML, CSS 6mo</p>
+                    <br>
+                    <p>Javascript 5mo</p>
+                </div>
+                <div class="hobby" onclick="toggleHobbyDetails('hobby3-details')">
+                    <img src="resource/song.jpg" alt="3번째 취미">
+                    <div class="hobby-info">
+                        <h3>3번째 취미: 노래부르기</h3>
+                        <p>노래를 부르는것을 좋아하며 이를 통해</p>
+                        <p>스트레스 해소를 합니다.</p>
+                        <audio controls>
+                            <source src="resource/Zach Sorgen - Sugarsweet.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div id="hobby3-details" class="hobby-details hidden">
+                    <p>Coldplay - Viva La Viva</p>
+                    <br>
+                    <p>Charlie Puth - One Call Away</p>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>연락처</h2>
+                <p>Email: <a href="mailto:twobean125@gmail.com">twobean125@gmail.com</a></p>
+                <p>웹 사이트 관련 문의는 이메일로만 부탁드립니다.</p>
+                <p>디스코드: twobean</p>
+                <p>인스타그램: <a href="https://www.instagram.com/twobean0w0/" target="_blank">
+                    <img src="resource/instagram.png" alt="Instagram" class="social-icon">
+                </a></p>
+                <p><a href="https://toss.me/twobean" target="_blank">토스 익명후원</a></p>
+            </section>
+            <footer>
+                <p>&copy; made by twobean</p>
+                <p>&copy; ai 시스템 개발 지원 : ilbie</p>
+                <p>&copy; 그림 이미지 지원 : creambbang</p>
+            </footer>
+        </main>
+
+        <div class="sidebar">
+            <h3>Chat twobean</h3>
+            <img src="resource/btwobean.png" alt="AI Chat" class="ai-chat-img" onclick="openChat()">
+        </div>
+    </div>
+
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-modal-content">
+            <span class="close-chat-btn" onclick="closeChat()">×</span>
+            <div id="chatWindow">
+                <div id="messages"></div>
+                <input type="text" id="userInput" placeholder="메시지를 입력하세요..." onkeydown="if (event.key === 'Enter') sendMessage()">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>
